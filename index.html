@@ -76,14 +76,9 @@
       <link href="styles/bootstrap.min.css" rel="stylesheet">
 
 
-
-      <!-- lazy loading -->
-     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script> -->
-
       <!-- icons -->
-      <!-- <script defer src="scripts/all.js"></script> -->
-      <link href="styles/font-awesome.min.css" rel="stylesheet">
+      <link href="styles/fontawesome.css" rel="stylesheet">
+      <link href="styles/solid.css" rel="stylesheet">
 
 
       <style>
@@ -181,7 +176,12 @@
 
                                       <div class="mt-4">
                                         <div class="embed-responsive embed-responsive-16by9 col-10 mx-auto">
-          "                                <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/327817668" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <!-- "                                <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/327817668" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+                                          <!-- <video   autoplay muted controls> -->
+                                            <video class="embed-responsive-item" controls autoplay muted preload="metadata">
+                                               <source src="assets/DataProKickstart.mp4" type="video/mp4">
+                                               <track label="English" kind="subtitles" srclang="en" src="assets/DataProKickstart.vtt" default>
+                                            </video>
                                         </div>
                                       </div>
                                       <div class="home_text_details text-white">
@@ -201,7 +201,7 @@
             <div class="row bg-success align-middle" id="counter">
                 <div class="col-lg-4">
                     <div class="text-center counter_box p-4 mt-3 text-white">
-                        <h1 class="h1 mb-1"><i class="fas fa-users"></i> 500K</h1>
+                        <h1 class="h1 mb-1"><i class="fas fa-camera"></i> 500K</h1>
                         <p class="info_name mb-0">Students of Ben's Courses</p>
                     </div>
                 </div>
