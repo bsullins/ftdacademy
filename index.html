@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="en" class="no-js">
 
   <head>
@@ -29,12 +29,13 @@
 
 
 
+
       </script>
 
 
 
       <!-- Facebook Pixel Code -->
-      <!-- <script>
+      <script>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
         n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -48,7 +49,7 @@
       </script>
       <noscript><img height="1" width="1" style="display:none"
         src="https://www.facebook.com/tr?id=580240379107405&ev=PageView&noscript=1"
-      /></noscript> -->
+      /></noscript>
       <!-- End Facebook Pixel Code -->
 
       <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -144,6 +145,9 @@
                 background-image: linear-gradient(135deg, #ff2a58, #fff);
             }
 
+            .icon {
+              margin: 4px;
+            }
 
 
       </style>
@@ -192,19 +196,20 @@
             <div class="row bg-success align-middle" id="counter">
                 <div class="col-lg-4">
                     <div class="text-center counter_box p-4 mt-3 text-white">
-                        <h1 class="h1 mb-1"><i class="fas fa-camera"></i> 500K</h1>
+                        <!-- <h1 class="h1 mb-1"><i class="fas fa-camera"></i> 500K</h1> -->
+                        <h1 class="h1 mb-1">500K</h1>
                         <p class="info_name mb-0">Students of Ben's Courses</p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="text-center counter_box p-4 mt-3 text-white">
-                        <h1 class="h1 mb-1"><i class="fas fa-money-bill-wave"></i> 100K+</h1>
+                        <h1 class="h1 mb-1">100K+</h1>
                         <p class="info_name mb-0">Avg. Salary</p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="text-center counter_box p-4 mt-3 text-white">
-                        <h1 class="h1 mb-1"><i class="fas fa-video"></i> 30+</h1>
+                        <h1 class="h1 mb-1">30+</h1>
                         <p class="info_name mb-0">Lessons</p>
                     </div>
                 </div>
@@ -283,7 +288,7 @@
                       <div class="col-lg-4">
                           <div class="features_header_main">
                               <div class="features_icon_box">
-                                  <p><span class="ml-2 h4"><i class="fas fa-mobile-alt"></i> How Data Drives Tech</span></p>
+                                  <p><span class="ml-2 h4"><image class="i-mobile icon" />How Data Drives Tech</span></p>
                                   <p>In this lesson we look at how data has become the most valuable resource on the planet and drives nearly every piece of technology we use today.</p>
                               </div>
                               <p class="text-muted mt-3"></p>
@@ -294,7 +299,7 @@
                       <div class="col-lg-4">
                           <div class="features_header_main">
                               <div class="features_icon_box">
-                                  <p><span class="ml-2 h4"><i class="fas fa-user-friends"></i> Data Roles Overview</span></p>
+                                  <p><span class="ml-2 h4"><image class="i-friends icon"/></i>Data Roles Overview</span></p>
                                   <p>There are three main roles in data, analyst, scientist and engineer. In this lesson we look at each one and what those roles entail to see which might be right for you.</p>
                               </div>
                               <p class="text-muted mt-3"></p>
@@ -305,7 +310,7 @@
                       <div class="col-lg-4">
                           <div class="features_header_main">
                               <div class="features_icon_box">
-                                  <p><span class="ml-2 h4 align-middle"><i class="fas fa-database"></i> Introducing Databases</span></p>
+                                  <p><span class="ml-2 h4 align-middle"><image class="i-database icon"/>Introducing Databases</span></p>
                                   <p>Databases are the central element in working with data. They've been around since the 1960's and still today drive most of the work you'll do in the field.</p>
                               </div>
                               <p class="text-muted mt-3"></p>
@@ -423,22 +428,7 @@
           </section>
           <!-- Footer End -->
 
-          <!-- linkedin Insights tag -->
-          <!-- <script type="text/javascript">
-              _linkedin_partner_id = "1033380";
-              window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-              window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-              </script><script type="text/javascript">
-              (function(){var s = document.getElementsByTagName("script")[0];
-              var b = document.createElement("script");
-              b.type = "text/javascript";b.async = true;
-              b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-              s.parentNode.insertBefore(b, s);})();
-              </script>
-              <noscript>
-              <img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=1033380&fmt=gif" />
-              </noscript> -->
-          <!-- End LinkedIn Insights Tag -->
+
           <!-- JAVASCRIPTS -->
           <script src="scripts/jquery-3.3.1.min.js"></script>
           <script src="scripts/bootstrap.min.js"></script>
@@ -447,6 +437,19 @@
 
 
           <script>
+
+          function loadIcons() {
+
+            $(".i-camera").attr("src","data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAgVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9d3yJTAAAAKnRSTlMAAQUICQoOExUgNTs+QU9UVWJpc4KDhYaUm56gorW5vMrV2tze4unv+/3qWV9QAAAA40lEQVRIx+3VyQ6CMBSF4VMFxXkExVmLQ8/7P6AL1HAduLDQjfy7kn4JadJeoOpHBf1JGL00HXf9T2DLj81qYqsZzZsA2o452UZWLMg90GJ+tiYECXNUCGdSEB1NkLczMMt0iVgnXSEIq5OxEITTyVQIQheMhChIsqIYMSuWJLEQhchTFfkrsjmUJpF3KE0gTMEr5tlyJIQwOOlkAmGw1kkfwmCokwDCoH7RxPb+wHpJSjBQhAsez7ifpARhPmlnhoWfkGcAGOT827ElRpK3cz0AQH24fnfWzsYd8zzyXj5UfaMrb/T9pkseESAAAAAASUVORK5CYII=");
+
+            $(".i-mobile").attr("src","data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAANlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC3dmhyAAAAEXRSTlMACBUaGyM8PY+Rksre5Ojp6xLdkZwAAACdSURBVEjH7dbLDoUgDATQseCV+uDx/z/rwg0mpYgu7qazrJ4QIcEBqlCIRUgMhEaW0sxPFlSUyOuwRoJIkkaiSKoX5msyV6Me2ZiZmbcBIuS/5JikB9OhkFU+5FUhjOYhGzFixIiRLxfsi2v82/8l50Gye8DtQ8QBgBsh+ZrkHkkaid1C4gHAdwsJaZ9PD8rVfZOXViEjFqtP4tsaJ58mMWK15HMzAAAAAElFTkSuQmCC");
+
+            $(".i-database").attr("src","data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAABKVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABUJ5OrAAAAYnRSTlMAAQIDBAUGCAkLDA8QExUXGBkaHB8iIyYpKissLS4vMDEzNDU2P0NER0lKS01QVVtfY2RmaGxtcXN3e36Cg4WGjI+UmKOoq7K1t7m8wMPHyMzR09fi5Obo6evt8fP19/n7/UlA5asAAAF/SURBVEhL7dXJUhNRAIXhv7sTA4KIhAgBowwKCYhCGBUFIzPiEIUAIoac938IFnfo2+xcuKFydvev/ha3uqsauvvX9YxP2L14DEA07MJE+QEADyv+kUHg6Y3SbQHRURCui8BkENSAb+FZAzCWCSfAeaYMIam+aLYnzUBV2rOhLgkiqW3D4qE0haTI3mpWqkFNmrUhkgSxdOUu/laa7pIuuT8kH5stOLJgQ94TG+JlS4IZEg7ibLiP5KLZyZJO8/IOaf0Mya8nENdDsp5AqRWQ748g986Tdi8AGyl5D0B/x5PfeQA+ObJp3mwhJQVTPnqyZEK/I3P2a0iJDfOevDQhdqRuzklKElNWPHltQsGR0xiAVykx32Vy7skPQ944op0YKP1NyU0ZyO3LE21FwPOOJ7r8sHogSapCVZJ0vLr9R4ZEkqTW5toXSdIUXxVuBMqZcAKcZcoQxavg+BlgNwjXRWC0HZQGkAxX7J4NmEv2uVAZMf/KXMk/Yn6n3f3v3QLGJG5C+xInVwAAAABJRU5ErkJggg==");
+
+            $(".i-friends").attr("src","data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAABU1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC9CYJrAAAAcHRSTlMAAQIDBAUGCAkKCw0QExQVFhcYHh8gIyUmKCkuLzAzNTc4Ozw9Pj9AQUJDR0pLTE5SVFVWV1hdXl9iY2RnaGlsbXV4foCIjo+Ul5qbnaKjpqirrbS1ucDByMrMz9HX2dre4OLk5ujr7e/x8/X3+fv9h5sxxwAAAZdJREFUGBntwWlbEmEAhtF7ZiSKSCqTpNU2bU9tQa1sL9OgsqINK00JBMbn/39qhmHgxWsG/FqX57Dn33BgerH45KzFrlkLaqnk6LD32/SxrNBFAsPvJRUOEeeSOpopfGPb8rljxCir6x6eoaoCFYdISRk+4Lmm0AkijcrQwFNQaIpI4zJZwLpCC0SalMkCXIUeE+myTBZQU2ieSOMyNPGUFbpBpJwMZTzLCp0k0rAMb/DcUShNJEeGWTxptVWI8VldWXyvFcgT44I6tmx8GbW4CWJYPxW6T2BDviVinVdbPUHLvpp8JYc4jtqe4ht55SrQfHGUGL8VmMAzI9PHEaKcUtunFJ7kg7oMKxl2SM2tqas0YQNDD10ZXiYwZBa1Qy2fAJLPZdhMEzpSVIRG3gEOf1HXqkXLwSXFqN60wH6rrtP45tTHrxzY39QxC1gF9TcPGXXcBZ5pkCsweXtmeurW9avnRm3IaqCqTY93GuwYPbQLZ+hR02DH6ZEtlr7/WNuo1OpNd1sGt9nY+rO5vvp15ZHNnv/RX1JDb3Cnbhx/AAAAAElFTkSuQmCC");
+
+          }
+
           $(function() {
 
             // lazy load images
@@ -489,6 +492,9 @@
 
             $("#jsoptin").append(html+refMsg);
 
+            loadIcons();
+
+
 
           });
 
@@ -508,8 +514,9 @@
 
 
           <!-- icons -->
-          <link href="styles/fontawesome.css" rel="stylesheet">
-          <link href="styles/solid.css" rel="stylesheet">
+          <!-- <link href="styles/fontawesome.css" rel="stylesheet">
+          <link href="styles/solid.css" rel="stylesheet">       -->
+
 
       </body>
 
