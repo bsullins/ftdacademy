@@ -12,24 +12,22 @@
     <link rel="shortcut icon" href="assets/favicon.ico">
 
 
+    <!--bootstrap Css-->
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
 
-<!-- convert kit js -->
+
+    <!-- convert kit js -->
     <script>
 
-    function getReferrer() {
-        if(!document.referrer){
-          return "organic"
-        } else {
-          var a=document.createElement('a');
-          a.href=document.referrer;
-          return a.hostname;
-        }
-    }
-
-
-
-
-
+      function getReferrer() {
+          if(!document.referrer){
+            return "organic"
+          } else {
+            var a=document.createElement('a');
+            a.href=document.referrer;
+            return a.hostname;
+          }
+      }
     </script>
 
 
@@ -67,10 +65,6 @@
 
 
     <!-- CSS we need before loading anything in body -->
-
-    <!--bootstrap Css-->
-    <link href="styles/bootstrap.min.css" rel="stylesheet">
-
 
 
     <style>
@@ -698,8 +692,6 @@
 
         })
         </script>
-
-
     </body>
 
 </html>
