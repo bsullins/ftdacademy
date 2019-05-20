@@ -366,40 +366,8 @@
                           <div class="text-center text-white">
                               <h2 class="font-weight-bold">Start Your Journey Now</h2>
                               <p class="mx-auto cta_details_mx mt-4 pt-2">Level up your career in data with my <strong>Data Kickstart</strong> course including 3 key lessons to help make your work count.</p>
-                              <div class="mt-4 pt-3">
-                                  <style>
-                                      @media screen and (min-width: 769px){
-                                          .formkit-field {
-                                                  width: 200px;
-                                                  max-width: 50%;
-                                                  float: left;
-                                                  display: inline-block;
-                                              }
-                                              .formkit-field:first-child {
-                                                  width: 200px;
-                                                  max-width: 50%;
-                                                  float: left;
-                                                  display: inline-block;
-                                                  padding-right: 7px;
-                                              }
-                                              .formkit-field:first-child + .formkit-field {
-                                                  width: 200px;
-                                                  max-width: 50%;
-                                                  float: left;
-                                                  display: inline-block;
-                                                  padding-left: 7px;
-                                              }
-                                      }
-                                      form.seva-form.formkit-form {
-                                          margin: 0 auto;
-                                      }
-                                      button.formkit-submit.formkit-submit {
-                                          width: 100%;
-                                      }
-                                  </style>
-
-                                  <!-- convert kit signup -->
-                                  <div id="jsoptin"></div>
+                              <div class="d-flex justify-content-center">
+                                  <script async data-uid="9cb1221b52" src="https://f.convertkit.com/9cb1221b52/cded19abb6.js"></script>
                               </div>
                           </div>
                       </div>
@@ -430,8 +398,6 @@
           <script src="scripts/bootstrap.min.js"></script>
           <!-- particles -->
           <script src="scripts/particles.min.js"></script>
-
-
           <script>
 
           function loadIcons() {
@@ -446,7 +412,7 @@
 
           }
 
-          $(function() {
+        $(function() {
 
             // lazy load images
             var allimages= document.getElementsByTagName('img');
@@ -456,41 +422,12 @@
                 }
             }
 
-            var html = ""
             var ref = getReferrer();
-            var refMsg = '<span style="display:none;">' + ref + '</span>';
-
-            if (ref.includes("google")) {
-
-              html='<script async data-uid="ae55c16c10" src="https://f.convertkit.com/ae55c16c10/d239863912.js"><\/script>';
-
-            } else if (ref.includes("facebook")) {
-
-              html='<script async data-uid="11be1e38be" src="https://f.convertkit.com/11be1e38be/d7e82ff266.js"><\/script>';
-
-            } else if (ref.includes("youtube")) {
-
-              html='<script async data-uid="427654d13c" src="https://f.convertkit.com/427654d13c/24e1960cb8.js"><\/script>';
-
-            } else if (ref.includes("instagram")) {
-
-              html='<script async data-uid="f087ea7f55" src="https://f.convertkit.com/f087ea7f55/08ca601d98.js"><\/script>';
-
-            } else if (ref.includes("linkedin")) {
-
-              html='<script async data-uid="cc9e95c2f2" src="https://f.convertkit.com/cc9e95c2f2/166fb23167.js"><\/script>';
-
-            }else {
-
-              html='<script async data-uid="eb5be85a03" src="https://f.convertkit.com/eb5be85a03/5f2acbb783.js"><\/script>';
-
-            }
-
-            $("#jsoptin").append(html+refMsg);
 
             loadIcons();
 
-
+            // set value for referrer
+            $("input[name='fields[source]']").attr('value', ref);
 
           });
 
@@ -505,7 +442,11 @@
               });
 
           })
+
+
           </script>
+
+
 
       </body>
 
