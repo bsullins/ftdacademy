@@ -145,6 +145,15 @@
               margin: 4px;
             }
 
+            .particles-wrapper{
+              position: fixed;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              z-index: -1;
+            }
+
 
       </style>
 
@@ -166,8 +175,7 @@
                                       <h1 class="home_title text-white text-capitalize mt-4 mb-2">Kickstart Your Data Career</h1>
 
                                       <div class="mt-4">
-                                        <div class="embed-responsive embed-responsive-16by9 col-10 mx-auto">
-          <!-- "                                <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/327817668" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+                                        <div class="embed-responsive embed-responsive-16by9 mx-auto">
                                           <!-- <video   autoplay muted controls> -->
                                             <video class="embed-responsive-item" controls autoplay muted preload="metadata">
                                                <source src="assets/DataProKickstart.mp4" type="video/mp4">
@@ -184,7 +192,7 @@
                       </div>
                   </div>
               </div>
-              <div id="particles-js"><canvas id="particle-canvas" class="particles fixed-top"></canvas></div>
+              <div id="particles-js" class="particles-wrapper"><canvas id="particle-canvas" class="particles"></canvas></div>
           </section>
           <!-- Home Section End-->
 
@@ -366,8 +374,8 @@
                           <div class="text-center text-white">
                               <h2 class="font-weight-bold">Start Your Journey Now</h2>
                               <p class="mx-auto cta_details_mx mt-4 pt-2">Level up your career in data with my <strong>Data Kickstart</strong> course including 3 key lessons to help make your work count.</p>
-                              <div class="d-flex justify-content-center">
-                                  <script async data-uid="9cb1221b52" src="https://f.convertkit.com/9cb1221b52/cded19abb6.js"></script>
+                              <div id="jsoptin" class="d-flex justify-content-center">
+                                <script async data-uid="9cb1221b52" src="https://f.convertkit.com/9cb1221b52/cded19abb6.js"></script>
                               </div>
                           </div>
                       </div>
@@ -422,24 +430,34 @@
                 }
             }
 
-            var ref = getReferrer();
+
 
             loadIcons();
 
-            // set value for referrer
-            $("input[name='fields[source]']").attr('value', ref);
+
+
+
 
           });
 
           $( window ).on( "load", function() {
 
 
-            // add things to element
-              var particles = Particles.init({
-                  selector: '.particles',
-                  color: '#7c52bf',
-                  connectParticles: true
-              });
+            try {
+                // add particles animation (not working in chrome??)
+                var particles = Particles.init({
+                    selector: '.particles',
+                    color: '#7c52bf',
+                    connectParticles: true
+                });
+              }
+              catch(err) {
+                console.log("Error loading particles: " + err);
+              }
+
+              var ref = getReferrer();
+              // set value for referrer
+              $("input[name='fields[source]']").attr('value', ref);
 
           })
 
