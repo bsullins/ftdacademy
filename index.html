@@ -28,6 +28,10 @@
               return a.hostname;
             }
         }
+
+        function isMobileDevice() {
+            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        };
       </script>
 
       <!-- Facebook Pixel Code -->
@@ -443,18 +447,29 @@
 
           $( window ).on( "load", function() {
 
+            mobileFlag = isMobileDevice();
 
-            try {
-                // add particles animation (not working in chrome??)
-                var particles = Particles.init({
-                    selector: '.particles',
-                    color: '#7c52bf',
-                    connectParticles: true
-                });
+            // console.log(mobileFlag);
+
+            if(!mobileFlag) {
+
+              // console.log("not a mobile device");
+              try {
+
+
+                  // add particles animation (not working in chrome??)
+                  var particles = Particles.init({
+                      selector: '.particles',
+                      color: '#7c52bf',
+                      connectParticles: true
+                  });
+                }
+                catch(err) {
+                  console.log("Error loading particles: " + err);
+                }
               }
-              catch(err) {
-                console.log("Error loading particles: " + err);
-              }
+
+
 
               var ref = getReferrer();
               // set value for referrer
