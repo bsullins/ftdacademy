@@ -25,7 +25,9 @@
             } else {
               var a=document.createElement('a');
               a.href=document.referrer;
+              var qs = document.referrer.split('?')[1] || '';
               console.log("doc: " + document.referrer);
+              console.log("qs: " + qs);
               return a.href;
             }
         }
