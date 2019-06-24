@@ -25,7 +25,7 @@
             } else {
               var a=document.createElement('a');
               a.href=document.referrer;
-              var qs = document.referrer.split('?')[1] || '';
+              var qs = window.location.search;
               console.log("doc: " + document.referrer);
               console.log("qs: " + qs);
               return a.href;
