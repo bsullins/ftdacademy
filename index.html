@@ -20,16 +20,15 @@
       <script>
 
         function getReferrer() {
-            if(!document.referrer){
-              return "organic"
-            } else {
-              var a=document.createElement('a');
-              a.href=document.referrer;
-              var qs = window.location.search;
-              console.log("doc: " + document.referrer);
-              console.log("qs: " + qs);
-              return a.href;
-            }
+
+          var qs = window.location.search;
+          console.log("qs: " + qs);
+
+          if(!qs){
+            return "none";
+          } else {
+            return qs;
+          }
         }
 
         function isMobileDevice() {
