@@ -440,6 +440,20 @@
 
           }
 
+          $.urlParam = function(name){
+            try {
+              var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+              return results[1] || 0;
+            } catch {
+              return "#unknown";
+            }
+
+          }
+          //
+          // console.log("source:" + $.urlParam('utm_source'));
+          // console.log("medium:" + $.urlParam('utm_medium'));
+          // console.log("campaign:" + $.urlParam('utm_campaign'));
+
         $(function() {
 
             // lazy load images
@@ -450,13 +464,7 @@
                 }
             }
 
-
-
             loadIcons();
-
-
-
-
 
           });
 
@@ -470,8 +478,6 @@
 
               // console.log("not a mobile device");
               try {
-
-
                   // add particles animation (not working in chrome??)
                   var particles = Particles.init({
                       selector: '.particles',
@@ -484,13 +490,10 @@
                 }
               }
 
-
-
-              var ref = getReferrer();
-
-              console.log(ref);
               // set value for referrer
-              $("input[name='fields[source]']").attr('value', ref);
+              $("input[name='fields[source]']").attr('value', $.urlParam('utm_source'));
+              $("input[name='fields[campaign]']").attr('value', $.urlParam('utm_campaign'));
+              $("input[name='fields[medium]']").attr('value', $.urlParam('utm_medium'));
 
           })
 
