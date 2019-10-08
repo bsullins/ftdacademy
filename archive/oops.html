@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Elevate Your Data Career at Free the Data Academy</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Free the Data Academy" />
+
+    <link rel="shortcut icon" href="assets/favicon.ico">
+
+
+    <!--bootstrap Css-->
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- convert kit js -->
+    <script>
+
+      function getReferrer() {
+          if(!document.referrer){
+            return "organic"
+          } else {
+            var a=document.createElement('a');
+            a.href=document.referrer;
+            return a.hostname;
+          }
+      }
+    </script>
+
+
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '580240379107405');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=580240379107405&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-280388-13"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-280388-13');
+
+      gtag('config', 'AW-984111608');
+
+    </script>
+
+
+    <!-- CSS we need before loading anything in body -->
+
+
+    <style>
+         body {
+            background-color: #222;
+          }
+
+          .particles {
+              z-index: -1;
+           }
+
+          .home_title {
+              font-size: 46px;
+              text-transform: capitalize;
+              font-weight: 400;
+              line-height: 1.2;
+          }
+          .home_table_cell_center {
+              display: table-cell;
+              /* vertical-align: middle; */
+          }
+
+          .home_table_cell {
+              display: table;
+              width: 100%;
+              height: 100vh;
+          }
+
+          .full_height_100vh_home {
+              height: 100vh;
+          }
+
+          .up-index {
+              z-index: 2;
+          }
+
+          .home_table_cell_center .display-3 {
+              font-size: 3.4em;
+          }
+
+          .home_subtitle {
+              color: #dadada;
+              max-width: 600px;
+              line-height: 1.8;
+          }
+
+
+          .section_all {
+              position: relative;
+              padding-top: 80px;
+              padding-bottom: 80px;
+          }
+
+          .section_title_all h3 {
+              font-size: 22px;
+              text-transform: uppercase;
+              font-weight: 700;
+          }
+
+          .section_subtitle {
+              max-width: 600px;
+          }
+
+          .section_title_all span {
+              color: #ff2a58;
+          }
+
+          .section_subtitle_border {
+              height: 2px;
+              background-color: #ff2a58;
+              width: 100px;
+              background-image: linear-gradient(135deg, #ff2a58, #fff);
+          }
+
+          .icon {
+            margin: 4px;
+          }
+
+
+    </style>
+
+
+
+</head>
+
+    <body>
+
+      <!-- Home Section Start-->
+
+        <section id="home" class="full_height_100vh_home">
+            <div class="home_table_cell" id="home-cell">
+                <div class="home_table_cell_center">
+                      <div class="container position-relative up-index">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-12">
+                                <div class="text-center mx-auto">
+                                    <h1 class="home_title text-white text-capitalize mt-4 mb-2">Doh!</h1>
+                                    <div class="home_text_details text-white">
+                                        <p class="home_title mx-auto mb-4 pb-2">Enrollment for FTD Acadaemy is currently closed. Thank you for your interest!</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="footer_alt_cpy mb-0 text-white">&copy;&nbsp;Free the Data Academy</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="particles-js"><canvas id="particle-canvas" class="particles fixed-top"></canvas></div>
+        </section>
+        <!-- Home Section End-->
+
+
+        <!-- JAVASCRIPTS -->
+        <script src="scripts/jquery-3.3.1.min.js"></script>
+        <script src="scripts/bootstrap.min.js"></script>
+        <!-- particles -->
+        <script src="scripts/particles.min.js"></script>
+
+        <script>
+
+        $( window ).on( "load", function() {
+
+
+          // add things to element
+            var particles = Particles.init({
+                selector: '.particles',
+                color: '#7c52bf',
+                connectParticles: true
+            });
+
+        })
+        </script>
+
+    </body>
+
+</html>
