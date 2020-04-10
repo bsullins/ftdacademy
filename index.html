@@ -272,13 +272,33 @@
 	<script src="https://player.vimeo.com/api/player.js"></script> <!-- vimeo -->
 
 	<script>
+
+	var getUrlParameter = function getUrlParameter(sParam) {
+			var sPageURL = window.location.search.substring(1),
+					sURLVariables = sPageURL.split('&'),
+					sParameterName,
+					i;
+
+			for (i = 0; i < sURLVariables.length; i++) {
+					sParameterName = sURLVariables[i].split('=');
+
+					if (sParameterName[0] === sParam) {
+							return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+					}
+			}
+	};
+
+
+
+
 	$(function(){
 
-		 var $video = $('#mainVid'),
+		var $video = $('#mainVid'),
 				 player = new Vimeo.Player($video);
 
 		player.setVolume(0);
 		player.play();
+
 
 
 		if (is_touch_device()) {
@@ -298,6 +318,16 @@
 			return 'ontouchstart' in window        // works on most browsers
 					|| navigator.maxTouchPoints;       // works on IE10/11 and Surface
 		};
+
+		// do thins after everything else is loaded
+		$(window).on('load', function() {			
+
+			//set hidden params
+			$('input[name="fields[source]"]').val(getUrlParameter('utm_source'));
+			$('input[name="fields[medium]"]').val(getUrlParameter('utm_medium'));
+			$('input[name="fields[campaign]"]').val(getUrlParameter('utm_campaign'));
+
+		});
 	</script>
 
 </body>
