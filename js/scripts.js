@@ -11,10 +11,10 @@
 
     /* Particles */
     try {
-      // add particles animation (not working in chrome??)
       var particles = Particles.init({
           selector: '.particles',
-          color: '#7c52bf',
+          // color: '#7c52bf',
+          color: '#31204C',
           connectParticles: true
       });
     }
@@ -24,12 +24,12 @@
 
 	/* PRELOADER */
 	$(window).load(function() {
-		var preloaderFadeOutTime = 500;
+		var preloaderFadeOutTime = 300;
 		function hidePreloader() {
 			var preloader = $('.spinner-wrapper');
 			setTimeout(function() {
 				preloader.fadeOut(preloaderFadeOutTime);
-			}, 500);
+			}, 300);
 		}
 		hidePreloader();
 	});
