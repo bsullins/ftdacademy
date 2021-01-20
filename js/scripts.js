@@ -12,8 +12,7 @@
     /* Particles */
     try {
       var particles = Particles.init({
-          selector: '.particles',
-          // color: '#7c52bf',
+          selector: '.particles',          
           color: '#31204C',
           connectParticles: true
       });
