@@ -14,7 +14,8 @@
       var particles = Particles.init({
           selector: '.particles',          
           color: '#31204C',
-          connectParticles: true
+		  connectParticles: true,
+		  opacity: 0.5
       });
     }
     catch(err) {
