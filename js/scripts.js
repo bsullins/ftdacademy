@@ -14,8 +14,7 @@
       var particles = Particles.init({
           selector: '.particles',          
           color: '#31204C',
-		  connectParticles: true,
-		  opacity: 0.5
+		  connectParticles: true		  
       });
     }
     catch(err) {
@@ -24,12 +23,12 @@
 
 	/* PRELOADER */
 	$(window).load(function() {
-		var preloaderFadeOutTime = 300;
+		var preloaderFadeOutTime = 200;
 		function hidePreloader() {
 			var preloader = $('.spinner-wrapper');
 			setTimeout(function() {
 				preloader.fadeOut(preloaderFadeOutTime);
-			}, 300);
+			}, 200);
 		}
 		hidePreloader();
 	});
